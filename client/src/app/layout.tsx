@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto, Roboto_Mono } from "next/font/google"; // Import supported fonts from Google
 import "./globals.css";
 import DashboardWrapper from "./dashboardWrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Import Roboto and Roboto Mono with weight property
+const roboto = Roboto({
+  variable: "--font-roboto", // Custom CSS variable for Roboto font
   subsets: ["latin"],
+  weight: ["400", "500", "700"], // Define the font weights you want to use
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono", // Custom CSS variable for Roboto Mono font
   subsets: ["latin"],
+  weight: ["400", "500", "700"], // Define the font weights you want to use
 });
 
 export const metadata: Metadata = {
@@ -26,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${roboto.variable} ${robotoMono.variable} antialiased`} // Apply both fonts
       >
         <DashboardWrapper>{children}</DashboardWrapper>
       </body>
