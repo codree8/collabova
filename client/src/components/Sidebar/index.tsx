@@ -179,7 +179,7 @@ const { data: currentUser } = useGetAuthUserQuery({});
                 className="h-full rounded-full object-cover"
               />
             ) : (
-              <User className="h-5 w-6 cursor-pointer self-cursor rounded-full dark:text-white" />
+              <User className="h-6 w-6 cursor-pointer self-center rounded-full dark:text-white" />
             )}
           </div>
           <span className="mx-3 text-gray-800 dark:text-white">
